@@ -1,4 +1,4 @@
-# Steps for building
+# Setup the environment
 0. Required packages:
     ```
     gcc-arm-embedded
@@ -24,12 +24,19 @@
     python -m pip install configparser pyserial
     ```
 
-3. Build the binary
+# Building and flashing
+
+1. Enter the python venv
+    ```bash
+    source venv/bin/activate
+    ```
+
+2. Build the binary
     ```bash
     make
     ```
 
-4. Flash the lora module
+3. Flash the lora module (change the usb0 to be whatever the lora module is connected to).
     ```bash
     python tremo_loader.py -p /dev/ttyUSB0 -b 921600 flash 0x08000000 build/main.bin
     ```
