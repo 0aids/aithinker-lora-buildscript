@@ -14,7 +14,9 @@
 
 1. Clone the repo with recursive cloning.
     ```bash
-    git clone --recursive --depth=1 https://github.com/0aids/aithinker-lora-buildscript.git
+    git clone --depth=1 https://github.com/0aids/aithinker-lora-buildscript.git
+    cd aithinker-lora-buildscript
+    git submodule update --init
     ```
 
 2. Setup the python venv environment, and install required packages
