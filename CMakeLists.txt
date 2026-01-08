@@ -93,7 +93,6 @@ target_link_libraries(main PRIVATE
 
 # Add linker options for this target
 target_link_options(main PRIVATE
-    --specs=nano.specs
     -static
     -mcpu=cortex-m4
     -mthumb
